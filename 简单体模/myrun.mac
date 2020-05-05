@@ -1,0 +1,13 @@
+#Macro myruntest
+/run/initialize
+#/control/verbose 0
+#/tracking/verbose 0
+#/event/verbose 0
+
+/gps/pos/type Point
+/gps/pos/centre 0 56 0 cm
+/gps/ang/type iso
+
+/gps/particle gamma
+/gps/energy 0.662 MeV
+/run/beamOn 100000
