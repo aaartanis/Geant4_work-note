@@ -1,0 +1,15 @@
+在B1例子上进行修改
+
+===DetectorConstruction===========================
+根据要求建立相关volume
+注意：
+  由于个人在steppingaction.cc中使用logicalvolume作为判断，不要把头和脖子用布尔型拼接起来
+  
+===PrimaryGeneratorAction=========================
+使用通用粒子源代替粒子枪，只在程序中创建粒子源，具体设置使用UI命令
+
+===phsiclist======================================
+使用默认QBBC物理列表
+
+===Response=======================================
+不会用SD的设置方式，在runaction创建root文件，在steppingaction和eventaction提取需要的信息，eventaction中进行fill
