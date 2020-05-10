@@ -85,12 +85,12 @@ void B1EventAction::EndOfEventAction(const G4Event* event)
   analysisManager->FillNtupleDColumn(3,px);
   analysisManager->FillNtupleDColumn(4,py);
   analysisManager->FillNtupleDColumn(5,pz);
-  analysisManager->FillNtupleDColumn(6,hx);
-  analysisManager->FillNtupleDColumn(7,hy);
-  analysisManager->FillNtupleDColumn(8,hz);
-  analysisManager->FillNtupleDColumn(9,bx);
-  analysisManager->FillNtupleDColumn(10,by);
-  analysisManager->FillNtupleDColumn(11,bz);
+  analysisManager->FillNtupleDColumn(6,hx/fEdep1);
+  analysisManager->FillNtupleDColumn(7,hy/fEdep1);
+  analysisManager->FillNtupleDColumn(8,hz/fEdep1);
+  analysisManager->FillNtupleDColumn(9,bx/fEdep2);
+  analysisManager->FillNtupleDColumn(10,by/fEdep2);
+  analysisManager->FillNtupleDColumn(11,bz/fEdep2);
   analysisManager->AddNtupleRow();
 
   if((eventID)%10000==0) 
@@ -115,10 +115,10 @@ void B1EventAction::EndOfEventAction(const G4Event* event)
                                         << pz//G4BestUnit(pz,"Vertex")
        << G4endl
               << "   h_x: " << std::setw(7)
-                                        << hx//G4BestUnit(hx,"position")
+                                        << hx/fEdep1//G4BestUnit(hx,"position")
        << G4endl
               << "   b_x: " << std::setw(7)
-                                        << bx//G4BestUnit(bx,"position")
+                                        << bx/fEdep2//G4BestUnit(bx,"position")
        << G4endl;
   }
 
