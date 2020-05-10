@@ -76,7 +76,7 @@ B1RunAction::B1RunAction()
   analysisManager->CreateNtuple("B1","Deposit energy and position");
   analysisManager->CreateNtupleIColumn("EventID");
   analysisManager->CreateNtupleDColumn("Energy_head");
-  analysisManager->CreateNtupleDColumn("Event_body");
+  analysisManager->CreateNtupleDColumn("Energy_body");
   analysisManager->CreateNtupleDColumn("px");
   analysisManager->CreateNtupleDColumn("py");
   analysisManager->CreateNtupleDColumn("pz");
